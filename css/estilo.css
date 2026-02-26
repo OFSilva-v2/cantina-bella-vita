@@ -1,0 +1,533 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-italiano: #2e5e3b;
+    --branco: #ffffff;
+    --vermelho-italiano: #c0392b;
+    --bege: #f9f3e9;
+    --cinza: #333333;
+    --cinza-claro: #f4f4f4;
+    --cinza-escuro: #222222;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--cinza);
+    background-color: var(--bege);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--verde-italiano) 0%, #1e3b28 100%);
+    color: var(--branco);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.logo h1 a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover, nav ul li a.ativo {
+    background-color: var(--vermelho-italiano);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../imagens/pratos/pizza.jpg.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+    text-align: center;
+    padding: 6rem 0;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--vermelho-italiano);
+    color: var(--branco);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-color: var(--branco);
+    transform: scale(1.05);
+}
+
+.btn-pequeno {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    background-color: var(--verde-italiano);
+}
+
+.btn-pequeno:hover {
+    background-color: var(--vermelho-italiano);
+    border-color: var(--verde-italiano);
+}
+
+/* Seções */
+.secao {
+    padding: 4rem 0;
+}
+
+.secao h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--verde-italiano);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.secao h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--vermelho-italiano);
+    margin: 1rem auto;
+}
+
+/* Grid de cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 1.5rem;
+}
+
+.card h3 {
+    color: var(--verde-italiano);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+/* FOOTER PROFISSIONAL MAIS ESTREITO */
+footer {
+    background: linear-gradient(135deg, var(--cinza-escuro) 0%, #1a1a1a 100%);
+    color: var(--branco);
+    padding: 2rem 0 0.5rem;
+    margin-top: 3rem;
+    border-top: 3px solid var(--vermelho-italiano);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h3 {
+    color: var(--vermelho-italiano);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+}
+
+.footer-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 0.5rem 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+/* ===== FILTROS DO CARDÁPIO - OPÇÃO 5: BOTÕES COM OUTLINE (BORDA APENAS) ===== */
+.filtros-cardapio {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.btn-filtro-outline {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--vermelho-italiano);
+    text-decoration: none;
+    border-radius: 40px;
+    border: 2px solid var(--vermelho-italiano);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.btn-filtro-outline:hover {
+    background-color: var(--vermelho-italiano);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(192, 57, 43, 0.3);
+}
+
+.btn-filtro-outline.ativo {
+    background-color: var(--vermelho-italiano);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(192, 57, 43, 0.4);
+}
+
+/* Cores alternativas para cada categoria (opcional) */
+.btn-filtro-outline.todos {
+    border-color: var(--verde-italiano);
+    color: var(--verde-italiano);
+}
+
+.btn-filtro-outline.todos:hover,
+.btn-filtro-outline.todos.ativo {
+    background-color: var(--verde-italiano);
+    color: white;
+}
+
+.btn-filtro-outline.entradas {
+    border-color: #e67e22;
+    color: #e67e22;
+}
+
+.btn-filtro-outline.entradas:hover,
+.btn-filtro-outline.entradas.ativo {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn-filtro-outline.massas {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.btn-filtro-outline.massas:hover,
+.btn-filtro-outline.massas.ativo {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-filtro-outline.pizzas {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.btn-filtro-outline.pizzas:hover,
+.btn-filtro-outline.pizzas.ativo {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-filtro-outline.sobremesas {
+    border-color: #9b59b6;
+    color: #9b59b6;
+}
+
+.btn-filtro-outline.sobremesas:hover,
+.btn-filtro-outline.sobremesas.ativo {
+    background-color: #9b59b6;
+    color: white;
+}
+
+/* Versão simplificada (apenas uma cor) */
+.btn-filtro-simples {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background-color: transparent;
+    color: var(--vermelho-italiano);
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid var(--vermelho-italiano);
+    transition: all 0.3s ease;
+}
+
+.btn-filtro-simples:hover {
+    background-color: var(--vermelho-italiano);
+    color: white;
+}
+
+.btn-filtro-simples.ativo {
+    background-color: var(--vermelho-italiano);
+    color: white;
+    font-weight: 600;
+}
+/* ===== FIM DOS FILTROS ===== */
+
+/* Página de produtos */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.produto-card {
+    background: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.produto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 1.5rem;
+}
+
+.produto-info h3 {
+    color: var(--verde-italiano);
+    margin-bottom: 0.5rem;
+}
+
+.produto-preco {
+    color: var(--vermelho-italiano);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.produto-descricao {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Página de contato */
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contato-info h3 {
+    color: var(--verde-italiano);
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--vermelho-italiano);
+    width: 30px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--verde-italiano);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    background-color: var(--verde-italiano);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--vermelho-italiano);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-col {
+        width: 100%;
+    }
+    
+    .info-item {
+        justify-content: center;
+    }
+    
+    /* Ajuste para os filtros no mobile */
+    .filtros-cardapio {
+        gap: 0.5rem;
+    }
+    
+    .btn-filtro-outline {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
